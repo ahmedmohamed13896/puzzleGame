@@ -10,20 +10,20 @@ function storeScore(time)
 		full_name : $('#fullname').val()
 	}
 	return $.ajax({
-	    url:"/abbvie/IBD-Puzzle/games",
-	    type:"POST",
-	    cache:false,
-	    data:data,
-	})
+    url: "https://mypuzzle-game.netlify.app",
+    type: "POST",
+    cache: false,
+    data: data,
+  });
 }
 
 function getScores()
 {
 	return $.ajax({
-	    url:"/abbvie/IBD-Puzzle/users",
-	    type:"GET",
-	    cache:false,
-	})
+    url: "https://mypuzzle-game.netlify.app/users",
+    type: "GET",
+    cache: false,
+  });
 }
 
 function calculateScore(time)
